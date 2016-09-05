@@ -41,11 +41,9 @@ const createStyleReducer = (originalStyle) => {
     const value = normalizeValue(prop, originalStyle[prop]);
     const longFormProperties = styleShortFormProperties[prop];
 
-    // React Native treats `flex:1` like `flex:1 1 auto`
+    // React Native treats `flex:1` like `flexGrow:1`
     if (prop === 'flex') {
       style.flexGrow = value;
-      style.flexShrink = 1;
-      style.flexBasis = 'auto';
     // React Native accepts 'center' as a value
     } else if (prop === 'textAlignVertical') {
       style.verticalAlign = (value === 'center' ? 'middle' : value);
