@@ -57,8 +57,7 @@ suite('apis/StyleSheet/expandStyle', () => {
 
     const expected = {
       flexGrow: value,
-      flexShrink: 1,
-      flexBasis: 'auto'
+      flexBasis: '0%'
     };
 
     assert.deepEqual(expandStyle(initial), expected);

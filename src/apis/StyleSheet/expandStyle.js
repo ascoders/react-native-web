@@ -45,8 +45,13 @@ const createStyleReducer = (originalStyle) => {
     if (prop === 'flex') {
       style.flexGrow = value;
       style.flexBasis = '0%';
-    // React Native accepts 'center' as a value
+    } else if (prop === 'flexBasis'){
+      if (value !== 'auto'){
+        // 如果 flexBasis 不等于初始值, 则会使用这个值
+        style[prop] = value;
+      }
     } else if (prop === 'textAlignVertical') {
+      // React Native accepts 'center' as a value
       style.verticalAlign = (value === 'center' ? 'middle' : value);
     } else if (longFormProperties) {
       longFormProperties.forEach((longForm, i) => {

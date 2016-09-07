@@ -136,14 +136,13 @@ class Switch extends Component {
 
 const styles = StyleSheet.create({
   root: {
-    cursor: 'pointer',
-    userSelect: 'none'
+
   },
   cursorDefault: {
-    cursor: 'default'
+
   },
   cursorInherit: {
-    cursor: 'inherit'
+
   },
   track: {
     ...StyleSheet.absoluteFillObject,

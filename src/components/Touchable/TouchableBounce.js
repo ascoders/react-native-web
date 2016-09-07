@@ -156,8 +156,7 @@ var TouchableBounce = React.createClass({
 
 const styles = StyleSheet.create({
   root: {
-    cursor: 'pointer',
-    userSelect: 'none'
+
   }
 });
 

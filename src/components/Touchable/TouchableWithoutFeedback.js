@@ -195,10 +195,10 @@ const TouchableWithoutFeedback = React.createClass({
 
 var styles = StyleSheet.create({
   root: {
-    cursor: 'pointer'
+
   },
   disabled: {
-    cursor: 'default'
+
   }
 });
 

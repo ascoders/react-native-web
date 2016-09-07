@@ -278,11 +278,10 @@ var INACTIVE_UNDERLAY_PROPS = {
 
 var styles = StyleSheet.create({
   root: {
-    cursor: 'pointer',
-    userSelect: 'none'
+
   },
   disabled: {
-    cursor: 'default'
+
   }
 });
 
