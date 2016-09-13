@@ -15,6 +15,8 @@ import React, { Component, PropTypes } from 'react';
 const viewStyleProps = Object.keys(ViewStylePropTypes);
 
 class TextInput extends Component {
+  static displayName = 'TextInput';
+
   static propTypes = {
     ...View.propTypes,
     autoComplete: PropTypes.bool,
@@ -253,6 +255,7 @@ const styles = StyleSheet.create({
   input: {
     appearance: 'none',
     backgroundColor: 'transparent',
+    borderRadius: 0,
     borderWidth: 0,
     boxSizing: 'border-box',
     color: 'inherit',

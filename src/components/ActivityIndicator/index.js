@@ -8,6 +8,8 @@ import React, { Component, PropTypes } from 'react';
 const rotationInterpolation = { inputRange: [ 0, 1 ], outputRange: [ '0deg', '360deg' ] };
 
 class ActivityIndicator extends Component {
+  static displayName = 'ActivityIndicator';
+
   static propTypes = {
     ...View.propTypes,
     animating: PropTypes.bool,
@@ -79,11 +81,16 @@ class ActivityIndicator extends Component {
     );
 
     return (
-      <View {...other} style={[
-        styles.container,
-        style,
-        size && { height: size, width: size }
-      ]}>
+      <View {...other}
+        accessibilityRole='progressbar'
+        aria-valuemax='1'
+        aria-valuemin='0'
+        style={[
+          styles.container,
+          style,
+          size && { height: size, width: size }
+        ]}
+      >
         <Animated.View
           children={svg}
           style={[
