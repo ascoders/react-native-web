@@ -41,10 +41,10 @@ const createStyleReducer = (originalStyle) => {
     const value = normalizeValue(prop, originalStyle[prop]);
     const longFormProperties = styleShortFormProperties[prop];
 
-    // React Native treats `flex:1` like `flexGrow: 1, flexBasis: 0%`
+    // React Native treats `flex:1` like `flexGrow: 1, flexBasis: 100%`
     if (prop === 'flex') {
       style.flexGrow = value;
-      style.flexBasis = '0%';
+      style.flexBasis = '100%';
     } else if (prop === 'flexBasis'){
       if (value !== 'auto'){
         // 如果 flexBasis 不等于初始值, 则会使用这个值
